@@ -1,0 +1,27 @@
+{
+  "name": "virtual-dom",
+  "version": "1.0.0",
+  "description": "Simulate the implementation of virtual dom and diff algorithms",
+  "scripts": {
+    "start": "webpack-dev-server --mode=development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuhao94/virtual-dom.git"
+  },
+  "author": "黄焖Jimmy饭",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fuhao94/virtual-dom/issues"
+  },
+  "homepage": "https://github.com/fuhao94/virtual-dom#readme",
+  "dependencies": {
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.1.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
+  }
+}
