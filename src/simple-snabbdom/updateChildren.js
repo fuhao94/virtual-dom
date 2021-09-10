@@ -26,6 +26,8 @@ export default function updateChildren(parentElm, oldChildren, newChildren) {
 
   while (newStartIdx <= newEndIdx && oldStartIdx <= oldEndIdx) {
     console.log('--------- 进入diff ---------');
+    // console.log({ newStartIdx, newEndIdx, oldStartIdx, oldEndIdx });
+    console.log(newStartVnode.text, newEndVnode.text, oldStartVnode.text, oldEndVnode.text);
 
     // 忽略我们加过 undefined 节点
     // --------- start ---------
@@ -41,7 +43,7 @@ export default function updateChildren(parentElm, oldChildren, newChildren) {
     // --------- end ---------
     // 1. 新前 和 旧前
     else if (sameVnode(newStartVnode, oldStartVnode)) {
-      console.log('命中1', { newStartIdx, oldStartIdx });
+      console.log('命中1');
       patchVnode(oldStartVnode, newStartVnode);
       // 指针移动
       newStartVnode = newChildren[++newStartIdx];
@@ -119,6 +121,7 @@ export default function updateChildren(parentElm, oldChildren, newChildren) {
 
   // 我们添加和删除操作还没做呢
   // 首先来完成添加操作 新前 和 新后 中间是否还存在节点
+  console.log({ newStartIdx, newEndIdx, oldStartIdx, oldEndIdx });
   if (newStartIdx <= newEndIdx) {
     console.log('进入添加剩余节点');
     // 这是一个标识

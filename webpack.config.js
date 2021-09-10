@@ -1,10 +1,10 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    // 虚拟打包路径
-    // publicPath: 'virtual',
+    path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
   },
   devServer: {
@@ -14,4 +14,10 @@ module.exports = {
     port: 8080,
   },
   devtool: 'cheap-source-map',
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'public/index.html',
+    }),
+  ],
 };
