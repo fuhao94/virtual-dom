@@ -90,6 +90,8 @@ export default function updateChildren(parentElm, oldChildren, newChildren) {
           // 如果 key 不为 undefined 添加到缓存中
           if (!key) keyMap[key] = i;
         }
+
+        console.log('缓存:', keyMap);
       }
 
       // 判断当前项是否存在 keyMap 中 ,当前项时 新前(newStartVnode)
